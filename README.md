@@ -13,8 +13,8 @@ A simple script made using python.
 To make this script work, you will need the following:
 
 - <a href="https://pro.coinmarketcap.com/" target="_blank">coinmarketcap.com</a> api token
-- A [telegram bot](https://core.telegram.org/bots#6-botfather) and it's token.
-- your_telegram_account_chat_id_here
+- A [telegram bot](https://core.telegram.org/bots#6-botfather) and it's `token`.
+- Your telegram account's `chat_id`
 - And Python3!
 
 ## For tutorial on how to make this from scratch, visit my blog --> [thecodingpie.com](https://thecodingpie.com)
