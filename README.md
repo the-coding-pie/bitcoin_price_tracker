@@ -2,7 +2,7 @@
 
 A simple script made using python. 
 
-## What It Will Do?
+## What It Can Do?
 
 - Tracks the bitcoin price for every _ minutes and stores it in a list.
 - When the list gets filled, it will send the data to your telegram app.
