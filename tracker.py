@@ -6,7 +6,7 @@ api_key = 'your_coinmarketcap_api_key'
 bot_token = 'your_telegram_bot_token'
 chat_id = 'your_telegram_account_chat_id_here'
 threshold = 30000
-time_limit = 5 * 60 # in seconds
+time_interval = 5 * 60 # in seconds
 
 
 def get_btc_price():
@@ -51,7 +51,7 @@ def main():
             price_list = []
 
         # fetch the price for every dash minutes
-        time.sleep(time_limit)
+        time.sleep(time_interval)
 
 # fancy way to activate the main() function
 if __name__ == '__main__':
