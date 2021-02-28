@@ -2,27 +2,29 @@ import requests
 import time
 
 # global variables
-api_key = 'your_coinmarketcap_api_key'
-bot_token = 'your_telegram_bot_token'
-chat_id = 'your_telegram_account_chat_id_here'
-threshold = 30000
+api_key = 'YOUR_COINMARKETCAP_API_KEY'
+bot_token = 'YOUR_TELEGRAM_BOT_TOKEN'
+chat_id = 'YOUR_TELEGRAM_ACCOUNT_CHAT_ID'
+market_symbol = 'BTC'
+currency_iso = 'EUR'
+threshold = 40000
 time_interval = 5 * 60 # in seconds
 
-
 def get_btc_price():
-    url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+    url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
+    query = '?symbol=' + market_symbol + '&convert=' + currency_iso
     headers = {
         'Accepts': 'application/json',
         'X-CMC_PRO_API_KEY': api_key
     }
     
     # make a request to the coinmarketcap api
-    response = requests.get(url, headers=headers)
+    response = requests.get(url + query, headers=headers)
     response_json = response.json()
-
     # extract the bitcoin price from the json data
-    btc_price = response_json['data'][0]
-    return btc_price['quote']['USD']['price']
+    btc_price = response_json['data'][market_symbol]
+
+    return btc_price['quote'][currency_iso]['price']
 
 # fn to send_message through telegram
 def send_message(chat_id, msg):
