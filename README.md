@@ -12,7 +12,7 @@ A simple script made using python.
 
 Changed CoinMarketCap API endpoint to 'quote' and limited the request to only the market symbol you are interested in.
  - Select cryptocurrency symbol (can also be used for other cryptocurrencies such as ETH)
- - Convert quote to different FIAT currency (ie. EUR instaad of hardcoded USD)
+ - Convert quote to different FIAT currency (ie. EUR instead of hardcoded USD)
 
 ## To Make It Work...
 
